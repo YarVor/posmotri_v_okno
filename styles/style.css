@@ -98,8 +98,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   font-family: "Fira Sans Condensed", "Fira Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -128,7 +128,7 @@ ol {
   background-color: inherit;
   border: 0;
   appearance: none;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Fira Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 122%;
@@ -140,6 +140,10 @@ ol {
 }
 
 .search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.search-form__textfield:focus {
   outline: none;
 }
 
@@ -181,7 +185,6 @@ ol {
   background-color: #fff;
   opacity: 0;
   transition: opacity 0.3s ease;
-  margin: 0 0 0 1px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -220,10 +223,15 @@ ol {
 
 /* SECTION CONTENT__DETAILS */
 
+.content__details{
+  height: 100%;
+  width: 399px;
+}
+
 .title {
   color: #fff;
   text-transform: uppercase;
-  font-family: "Oswald";
+  font-family: "Oswald", "Fira Sans", Arial, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 93.33%;
@@ -237,6 +245,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
+  position: relative;
   overflow-y: scroll;
   height: 100%;
   max-height: 298px;
@@ -246,9 +255,13 @@ ol {
   width: 6px;
 }
 
+
+/* В макете в целом нет скролбара и нет ui kit'а чтоб определить под него цвет, плюс описании проектной работы где показывают гифки, там используется чёрный цвет скролбара*/
 .content__list::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #545050;
 }
+
+
 
 .content__list::-webkit-scrollbar-track {
   background-color: transparent;
@@ -282,7 +295,7 @@ ol {
   background: #545050;
 }
 
-.content__card-link_current:active {
+..content__card-link:active {
   background: #545050;
 }
 
@@ -298,7 +311,7 @@ ol {
 
 .content__video-card-title {
   text-transform: uppercase;
-  font-family: "Oswald";
+  font-family: "Oswald", "Fira Sans", Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -309,7 +322,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Fira Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 89%;
