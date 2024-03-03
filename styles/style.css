@@ -252,13 +252,15 @@ ol {
 }
 
 .content__list::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 
 /* В макете в целом нет скролбара и нет ui kit'а чтоб определить под него цвет, плюс описании проектной работы где показывают гифки, там используется чёрный цвет скролбара*/
 .content__list::-webkit-scrollbar-thumb {
-  background-color: #545050;
+  background-color: #1b1919;
+  border-radius: 15px;
+  border: 2px solid #545050;
 }
 
 
